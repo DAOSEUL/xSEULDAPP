@@ -1,0 +1,46 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:import/recommended",
+		"plugin:import/typescript",
+		"prettier",
+		"plugin:@tanstack/eslint-plugin-query/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"ignorePatterns": [".eslintrc.js"],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["react", "@typescript-eslint"],
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"react/no-unescaped-entities": "off",
+		"import/no-unresolved": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"import/order": [
+			"warn",
+			{
+				"alphabetize": { "order": "asc" },
+				"groups": ["builtin", "external", "internal", "parent", "sibling", "index", "type"],
+				"pathGroupsExcludedImportTypes": ["type"],
+				"pathGroups": [
+					{
+						"pattern": "~/**",
+						"group": "external",
+						"position": "after"
+					}
+				]
+			}
+		]
+	}
+}

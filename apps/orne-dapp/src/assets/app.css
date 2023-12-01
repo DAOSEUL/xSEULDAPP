@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	scrollbar-gutter: stable;
+}
+
+.swap-underline {
+	position: relative;
+}
+
+.swap-underline::before {
+	content: '';
+	background-image: url('./texts/swap-underline.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 145px;
+	height: 67px;
+	position: absolute;
+	top: 2px;
+	left: -11px;
+}
+
+.earn-underline {
+	position: relative;
+}
+
+.earn-underline::before {
+	content: '';
+	background-image: url('./texts/earn-underline.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 114px;
+	height: 6px;
+	position: absolute;
+	bottom: 0px;
+	left: -5px;
+}
+
+.dashboard-underline {
+	position: relative;
+}
+
+.dashboard-underline::before {
+	content: '';
+	background-image: url('./texts/dashboard-underline.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 265px;
+	height: 67px;
+	position: absolute;
+	top: -2px;
+	left: -10px;
+}
+
+@media screen and (max-width: 435px) {
+	.dashboard-underline::before {
+		content: '';
+		background-image: url('./texts/dashboard-underline.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 265px;
+		height: 67px;
+		position: absolute;
+		top: 48px;
+		left: -182px;
+	}
+}
