@@ -16,7 +16,7 @@ export function PoolInfo() {
 	return (
 		<div className="bg-offWhite flex flex-1 flex-col justify-between gap-10 rounded-lg p-8 pb-14 shadow-sm lg:flex-row lg:items-center lg:pb-8">
 			<div className="flex flex-col">
-				<span className="mb-2 text-lg font-semibold">SEUL / axlUSDT</span>
+				<span className="mb-2 text-lg font-semibold">xSEUL / axlUSDT</span>
 				<div className="flex gap-2">
 					<IconToken name={Token.Orne} size={36} />
 					<IconToken name={Token.Luna} size={36} />

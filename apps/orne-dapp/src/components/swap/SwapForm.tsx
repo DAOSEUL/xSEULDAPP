@@ -97,7 +97,7 @@ export function SwapForm() {
 				<div className="p-5">
 					<dl className="space-y-2">
 						<div className="flex items-center justify-between">
-							<dt className="font-semibold">1 $Seul</dt>
+							<dt className="font-semibold">1 $xSEUL</dt>
 							<dd className="text-mediumGrey inline-flex items-center">
 								{isSimulating ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : pricePerToken} axlUSDT
 							</dd>
@@ -128,7 +128,7 @@ export function SwapForm() {
 						</span>
 						<div className="flex items-center gap-2">
 							<IconToken name={to} size={36} />
-							<span className="text-mediumGrey">SEUL</span>
+							<span className="text-mediumGrey">xSEUL</span>
 						</div>
 					</div>
 				</div>

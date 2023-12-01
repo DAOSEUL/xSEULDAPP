@@ -70,7 +70,7 @@ export function Wallet() {
 					) : (
 						<p className="text-2xl font-semibold">
 							{readAmounts(orneBalance.data?.balance, { decimals: 18, comma: true, fixed: 3 })}{' '}
-							<span className="font-normal">SEUL</span>
+							<span className="font-normal">xSEUL</span>
 						</p>
 					)}
 					{lunaBalance.isLoading ? (

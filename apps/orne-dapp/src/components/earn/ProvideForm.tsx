@@ -101,7 +101,7 @@ export function ProvideForm() {
             <form onSubmit={handleSubmit}>
                 <div className="mb-5 flex items-center gap-2">
                     <h2 className="text-3xl font-semibold">
-                        Add Liquidity <span className="text-green">axlUSDT-SEUL</span>
+                        Add Liquidity <span className="text-green">axlUSDT-xSEUL</span>
                     </h2>
                 </div>
                 <div className="mb-10 flex flex-col gap-8 lg:flex-row">
@@ -167,7 +167,7 @@ export function ProvideForm() {
                                 )}
                                 <div className="flex items-center gap-2">
                                     <IconToken name={Token.Orne} size={36} />
-                                    <span className="text-mediumGrey">SEUL</span>
+                                    <span className="text-mediumGrey">xSEUL</span>
                                 </div>
                             </div>
                         </div>
