@@ -18,10 +18,10 @@ export function Dashboard() {
 		<div className="mt-5 lg:-mt-6">
 			<div className="timport { readAmounts } from '~/utils/readAmounts';ext-center lg:mb-20 lg:text-left">
 				<h1 className="mb-5 text-5xl font-bold">
-					SEUL<span className="dashboard-underline">dashboard</span>
+					xSEUL<span className="dashboard-underline">dashboard</span>
 				</h1>
 				<h2 className="text-2xl">
-					All information about <span className="text-green">$SEUL</span>
+					All information about <span className="text-green">$xSEUL</span>
 				</h2>
 			</div>
 
@@ -36,7 +36,7 @@ export function Dashboard() {
 							<div className="flex items-center gap-2">
 								<IconToken name={Token.Orne} size={60} />
 								<div className="flex flex-col">
-									<span className="font-semibold">SEUL</span>
+									<span className="font-semibold">xSEUL</span>
 								</div>
 							</div>
 						</div>
@@ -46,7 +46,7 @@ export function Dashboard() {
 								{/* Harga */}
 <div className="bg-offWhite flex h-32 flex-1 flex-col justify-center gap-2 rounded-lg p-7 shadow-sm">
     <div className="flex items-center gap-2">
-        <span className="text-darkBlue50">Price SEUL</span>
+        <span className="text-darkBlue50">Price xSEUL</span>
         <Tooltip
             trigger={
                 <div>
@@ -64,7 +64,7 @@ export function Dashboard() {
             </div>
         ) : (
             <div className="text-2xl font-semibold">
-                {/* Hitung harga SEUL dengan membagi Pooled axlUSDT oleh Pooled SEUL */}
+                {/* Hitung harga xSEUL dengan membagi Pooled axlUSDT oleh Pooled xSEUL */}
                 {Number((ornePoolInfo.data!.luna / ornePoolInfo.data!.orne).toFixed(6))}{' '}<span className="font-normal">USD</span>{' '}
 							<small className="text-sm">($)</small>
             </div>
@@ -114,7 +114,7 @@ export function Dashboard() {
 
     <div className="flex items-center justify-between">
         <div className="flex flex-col">
-            <span className="text-sm font-semibold">Pooled SEUL</span>
+            <span className="text-sm font-semibold">Pooled xSEUL</span>
             <div className="text-mediumGrey text-sm">
                 {ornePoolInfo.isLoading ? (
                     <div>

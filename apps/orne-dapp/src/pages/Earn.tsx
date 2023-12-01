@@ -13,7 +13,7 @@ export function Earn() {
 		<div className="mt-5 lg:-mt-6">
 			<div className="mb-10 text-center lg:mb-20 lg:text-left">
 				<h1 className="mb-5 text-5xl font-bold">
-					<span className="earn-underline">SEUL</span> Stake LP
+					<span className="earn-underline">xSEUL</span> Stake LP
 				</h1>
 				<h2 className="text-2xl">
 					Add Liquidity earn <span className="text-green">Reward</span>
