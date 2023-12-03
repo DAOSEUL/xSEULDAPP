@@ -26,27 +26,20 @@ export function useWithdrawLiquidity() {
 		mutationFn: async (params: WithdrawLiquidityParams) => {
 			const amount = params.amount.times(1_000_000).toString();
 
-			const unstakeMsg = new MsgExecuteContract(connectedWallet.terraAddress, app.contract.astroGenerator, {
-				withdraw: {
-					amount,
-					lp_token: app.contract.lp,
-				},
-			});
-
-			const withdrawMsg = new MsgExecuteContract(connectedWallet.terraAddress, app.contract.lp, {
-				send: {
-					amount,
-					contract: app.contract.orneLunaPair,
-					msg: 'eyJ3aXRoZHJhd19saXF1aWRpdHkiOnt9fQ',
-				},
-			});
-
+			const unstakeMsg = new MsgExecuteContract(connectedWallet.terraAddress, 'terra1q328gl40az3cf9x67cgudn8e8w2az9vsmhtkwsgdu7a43rhy5caqc82yr5', {
+        send: {
+          contract: 'terra1chx8lsvhhutec2es64062r03zj3gfhkqvqy46nxarzuy5tlyztasehwpys',
+          amount: params.amount.times(1_000_000).toString(),
+          msg: 'eyJsZWF2ZSI6e319',
+        },
+      });
+			
 			const tx = await connectedWallet.post({
 				chainID: network.chainID,
 				gasAdjustment: '1.6',
 				gasPrices: '0.456uusd',
 				feeDenoms: ['uusd'],
-				msgs: [unstakeMsg, withdrawMsg],
+				msgs: [unstakeMsg],
 			});
 
 			push({
