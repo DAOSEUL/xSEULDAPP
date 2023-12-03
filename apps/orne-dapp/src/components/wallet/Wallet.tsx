@@ -82,7 +82,7 @@ export function Wallet() {
 					) : (
 						<p className="text-2xl font-semibold">
 							{readAmounts(balance?.lpBalance)}
-							<span className="font-normal">axlUSDT</span>
+							<span className="font-normal">SEUL</span>
 						</p>
 					)}
 				</div>
