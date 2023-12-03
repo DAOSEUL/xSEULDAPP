@@ -16,10 +16,10 @@ export function PoolStakedToken() {
 				) : (
 					<>
 						<span className="text-2xl font-semibold">
-							~{readAmounts(orneBalance.data?.balance)} <span className="text-base font-normal">SEUL</span>
+							~{readAmounts(orneBalance.data?.balance)} <span className="text-base font-normal">xSEUL</span>
 						</span>
 						<span className="text-2xl font-semibold absolute -bottom-5 right-0 w-max text-sm">
-							+ {readAmounts(balance?.lpBalance)} xSEUL
+							+ {readAmounts(balance?.lpBalance)} SEUL
 						</span>
 					</>
 				)}
