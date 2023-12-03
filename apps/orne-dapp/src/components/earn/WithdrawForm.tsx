@@ -5,6 +5,7 @@ import { ThreeDots } from 'react-loader-spinner';
 import { useDebounce } from 'use-debounce';
 import swapCurrency from '~/assets/swap-currency.svg';
 import { AmountInput } from '~/components/form/AmountInput';
+import { useOrneBalance } from '~/hooks/useOrneBalance';
 import { useLPBalance } from '~/hooks/useLPBalance';
 import { useShare } from '~/hooks/useShare';
 import { useWithdrawLiquidity } from '~/hooks/useWithdrawLiquidity';
@@ -15,8 +16,9 @@ import { Button } from '../ui/Button';
 import { IconToken } from '../ui/IconToken';
 
 export function WithdrawForm() {
-	const { data: lpBalance, isLoading } = useLPBalance();
-
+	const orneBalance = useOrneBalance();
+  const { data: balance, isLoading: isLoadingBalance } = useLPBalance();
+	
 	const [amount, setAmount] = useState('');
 	const [debouncedAmount] = useDebounce(amount, 700);
 	const { data: withdrawing, isLoading: isLoadingShare } = useShare(+debouncedAmount);
@@ -37,7 +39,7 @@ export function WithdrawForm() {
   <>
     <div className="mb-5 flex items-center gap-2">
       <h2 className="text-3xl font-semibold">
-        Withdraw <span className="text-green">axlUSDT-xSEUL</span>
+        Burn <span className="text-green">xSEUL</span>
       </h2>
       {/* <button className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white">
         Max
@@ -51,11 +53,11 @@ export function WithdrawForm() {
             <span className="text-darkBlue50 mb-3">Balance</span>
             <div className="-mt-2 flex items-center gap-2">
               <span className="text-darkBlue50">
-                {isLoading ? (
-                  <ThreeDots color="hsl(203,23%,42%)" height="10" />
-                ) : (
-                  readAmounts(lpBalance?.stakedLPBalance)
-                )}
+                {isLoadingBalance ? (
+					       <ThreeDots color="hsl(203,23%,42%)" height="10" />
+				          ) : (
+                    readAmounts(balance?.lpBalance)
+                  )}
               </span>
               {/* <button className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white">
                 Max
@@ -75,7 +77,7 @@ export function WithdrawForm() {
     </div>
 
     <Button className="mb-14" onClick={handleSubmit}>
-      Unstake uLP
+      Burn xSEUL
     </Button>
   </>
 );
