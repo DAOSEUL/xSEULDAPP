@@ -1,1 +1,1 @@
-# xseul.earn
+# xseul.seul
