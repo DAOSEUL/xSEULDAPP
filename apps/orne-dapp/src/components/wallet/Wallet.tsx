@@ -10,11 +10,13 @@ import { Popover } from '~/components/ui/Popover';
 import { useConnectedWallet } from '~/hooks/useConnectedWallet';
 import { useLunaBalance } from '~/hooks/useLunaBalance';
 import { useOrneBalance } from '~/hooks/useOrneBalance';
+import { useLPBalance } from '~/hooks/useLPBalance';
 import { readAmounts } from '~/utils/readAmounts';
 
 export function Wallet() {
 	const orneBalance = useOrneBalance();
 	const lunaBalance = useLunaBalance();
+	const { data: balance, isLoading: isLoadingBalance } = useLPBalance();
 	const wallet = useWallet();
 	const connectedWallet = useConnectedWallet();
 	const [isCopy, setIsCopy] = useState<boolean>(false);
@@ -73,13 +75,13 @@ export function Wallet() {
 							<span className="font-normal">xSEUL</span>
 						</p>
 					)}
-					{lunaBalance.isLoading ? (
+					{isLoadingBalance ? (
 						<div>
 							<ThreeDots width={35} height={30} color="hsl(230, 21%, 65%)" />
 						</div>
 					) : (
 						<p className="text-2xl font-semibold">
-							{readAmounts(lunaBalance.data?.balance, { decimals: 6, comma: true, fixed: 3 })}{' '}
+							{readAmounts(balance?.lpBalance)}
 							<span className="font-normal">axlUSDT</span>
 						</p>
 					)}
