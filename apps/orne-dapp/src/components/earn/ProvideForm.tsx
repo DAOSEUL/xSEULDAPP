@@ -5,12 +5,14 @@ import { ThreeDots } from 'react-loader-spinner';
 import { useDebounce } from 'use-debounce';
 import { AmountInput } from '~/components/form/AmountInput';
 import { useOrneBalance } from '~/hooks/useOrneBalance';
+import { useLPBalance } from '~/hooks/useLPBalance';
 import { useWithdrawLiquidity } from '~/hooks/useWithdrawLiquiditys';
 import { readAmounts } from '~/utils/readAmounts';
 import { Button } from '../ui/Button';
 
 export function ProvideForm() {
   const orneBalance = useOrneBalance();
+	const { data: balance, isLoading: isLoadingBalance } = useLPBalance();
 	
   const [amount, setAmount] = useState('');
   const [debouncedAmount] = useDebounce(amount, 700);
@@ -42,10 +44,10 @@ export function ProvideForm() {
               <span className="text-darkBlue50 mb-3">Balance</span>
               <div className="-mt-2 flex items-center gap-2">
                 <span className="text-darkBlue50">
-                  {orneBalance.isLoading ? (
-                    <ThreeDots color="hsl(203,23%,42%)" height="10" />
-                  ) : (
-                    readAmounts(orneBalance.data?.balance)
+                  {isLoadingBalance ? (
+					       <ThreeDots color="hsl(203,23%,42%)" height="10" />
+				          ) : (
+                    readAmounts(balance?.lpBalance)
                   )}
                 </span>
               </div>

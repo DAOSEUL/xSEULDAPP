@@ -53,10 +53,10 @@ export function WithdrawForm() {
             <span className="text-darkBlue50 mb-3">Balance</span>
             <div className="-mt-2 flex items-center gap-2">
               <span className="text-darkBlue50">
-                {isLoadingBalance ? (
-					       <ThreeDots color="hsl(203,23%,42%)" height="10" />
-				          ) : (
-                    readAmounts(balance?.lpBalance)
+                {orneBalance.isLoading ? (
+                    <ThreeDots color="hsl(203,23%,42%)" height="10" />
+                  ) : (
+                    readAmounts(orneBalance.data?.balance)
                   )}
               </span>
               {/* <button className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white">

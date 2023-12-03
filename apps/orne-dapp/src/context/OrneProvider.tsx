@@ -20,7 +20,7 @@ const kMainnetContract: ContractAddress = {
 	token: 'terra1q328gl40az3cf9x67cgudn8e8w2az9vsmhtkwsgdu7a43rhy5caqc82yr5',
 	orneLunaPair: 'terra1m8me49mcvldxe2qsrxnk7jn6x8xw858gcm6zmeumz0rm80gg3cpq2625cf',
 	lunaUsdcPair: 'terra1fd68ah02gr2y8ze7tm9te7m70zlmc7vjyyhs6xlhsdmqqcjud4dql4wpxr',
-	lp: 'terra15c2mn5klh6uvna6tt8xp43ez0cyfzyek8n5nmszkhe44xgypvkns38f5sy',
+	lp: 'terra13s5pxw5j2p4ssvzwvxd8l7h30vke8vjgtng75vqgv6p9vddfk3hskfka0l',
 	company: 'terra1swvw2l2ttg685usu660qql09yefy3mec5l08eu',
 	astroGenerator: 'terra1ksvlfex49desf4c452j6dewdjs6c48nafemetuwjyj6yexd7x3wqvwa7j9',
 	presale: 'terra17wzrjl43t7wen3fd67t5qg9nzxeqkdffa7wrgr3k4rnv6fz5cv4qyff6c2',
