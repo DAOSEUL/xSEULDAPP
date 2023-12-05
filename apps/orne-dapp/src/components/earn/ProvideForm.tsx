@@ -11,16 +11,22 @@ import { readAmounts } from '~/utils/readAmounts';
 import { Button } from '../ui/Button';
 
 export function ProvideForm() {
-  const orneBalance = useOrneBalance();
-	const { data: balance, isLoading: isLoadingBalance } = useLPBalance();
-	
+  const { data: orneBalance } = useOrneBalance();
+  const { data: balance, isLoading: isLoadingBalance } = useLPBalance();
+
   const [amount, setAmount] = useState('');
   const [debouncedAmount] = useDebounce(amount, 700);
   const { mutate: withdraw } = useWithdrawLiquidity();
 
+  const handleMaxClick = () => {
+    if (orneBalance && balance) {
+      setAmount(readAmounts(balance.lpBalance));
+    }
+  };
+
   function handleSubmit() {
     withdraw(
-      { amount: new Dec(string.transformToValidInput(amount)) },
+      { amount: new Dec(string.transformToValidInput(debouncedAmount)) },
       {
         onSuccess() {
           setAmount('');
@@ -35,13 +41,13 @@ export function ProvideForm() {
         <h2 className="text-3xl font-semibold">
           Mint <span className="text-green">xSEUL</span>
         </h2>
-				 <button
-            type="button" // Ensure it's a button, not a form submission button
-            className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white"
-            onClick={handleMaxClick}
-          >
-            Max
-          </button>
+        <button
+          type="button" // Ensure it's a button, not a form submission button
+          className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white"
+          onClick={handleMaxClick}
+        >
+          Max
+        </button>
       </div>
 
       <div className="mb-10 flex flex-col items-center gap-8">
@@ -52,8 +58,8 @@ export function ProvideForm() {
               <div className="-mt-2 flex items-center gap-2">
                 <span className="text-darkBlue50">
                   {isLoadingBalance ? (
-					       <ThreeDots color="hsl(203,23%,42%)" height="10" />
-				          ) : (
+                    <ThreeDots color="hsl(203,23%,42%)" height="10" />
+                  ) : (
                     readAmounts(balance?.lpBalance)
                   )}
                 </span>
