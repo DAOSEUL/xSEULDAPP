@@ -89,7 +89,7 @@ export function SwapForm() {
 						/>
 						<div className="flex items-center gap-2">
 							<IconToken name={from} size={36} />
-							<span className="text-mediumGrey">axlUSDT</span>
+							<span className="text-mediumGrey"></span>
 						</div>
 					</div>
 				</div>
@@ -128,7 +128,7 @@ export function SwapForm() {
 						</span>
 						<div className="flex items-center gap-2">
 							<IconToken name={to} size={36} />
-							<span className="text-mediumGrey">xSEUL</span>
+							<span className="text-mediumGrey"></span>
 						</div>
 					</div>
 				</div>
