@@ -9,7 +9,7 @@ export function PoolStakedToken() {
   const orneBalance = useOrneBalance();
 	return (
 		<div className="flex flex-col gap-2">
-			<span className="text-darkBlue50">My Balance</span>
+			<span className="text-sky-500">My Balance</span>
 			<div className="relative flex flex-col">
 				{isLoadingBalance ? (
 					<ThreeDots color="hsl(203,23%,42%)" height="10" />
