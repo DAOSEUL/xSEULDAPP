@@ -56,35 +56,30 @@ export function WithdrawForm() {
 			</div>
 
 			<div className="mb-10 flex flex-col items-center gap-8">
-				<div className="w-full flex-1">
-					<div className="bg-slate-900 flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
-						<div className="flex w-full justify-between">
-							<span className="text-sky-500 mb-3">Balance xSEUL 》》》</span>
-							<div className="-mt-2 flex items-center gap-2">
-								<span className="text-sky-500">
-									{isLoadingOrneBalance ? (
-										<ThreeDots color="hsl(203,23%,42%)" height="10" />
-									) : (
-										readAmounts(orneBalance?.balance)
-									)}
-								</span>
-							</div>
-						</div>
-						<div className="flex justify-between">
-							<AmountInput className="bg-slate-900 text-sky-500 font-semibold" value={amount} onChange={setAmount} />
-							{/* Removed columns for ORNE and LUNA */}
-						</div>
-					</div>
-				</div>
+  <div className="w-full flex-1">
+    <div className="bg-slate-900 flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
+      <div className="flex w-full justify-between">
+        <span className="text-sky-500 mb-3">Balance SEUL 》》》</span>
+        <div className="-mt-2 flex items-center gap-2">
+          <span className="text-sky-500">
+            {isLoadingOrneBalance ? (
+              <ThreeDots color="hsl(203,23%,42%)" height="10" />
+            ) : (
+              readAmounts(orneBalance?.balance)
+            )}
+          </span>
+        </div>
+      </div>
+      <div className="flex justify-between">
+        <AmountInput className="bg-slate-900 text-2xl font-semibold text-sky-500" value={amount} onChange={setAmount} />
+      </div>
+    </div>
+  </div>
+</div>
 
-				{/* Removed "Swap currency" section */}
-
-				{/* Removed columns for ORNE and LUNA */}
-			</div>
-
-			<Button className="mb-14" onClick={handleSubmit}>
-				Burn xSEUL
-			</Button>
+<Button className="mb-14" onClick={handleSubmit}>
+  Burn xSEUL
+</Button>
 		</>
 	);
 };
