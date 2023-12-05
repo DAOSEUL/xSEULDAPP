@@ -44,7 +44,7 @@ export function WithdrawForm() {
 		<>
 			<div className="mb-5 flex items-center gap-2">
 				<h2 className="text-3xl font-semibold">
-					Burn <span className="text-sky-500">xSEUL</span>
+					{/*Burn <span className="text-sky-500">xSEUL</span> */}
 				</h2>
 				<button
 					type="button"
@@ -71,7 +71,7 @@ export function WithdrawForm() {
 							</div>
 						</div>
 						<div className="flex justify-between">
-							<AmountInput className="bg-slate-900 text-2xl font-semibold" value={amount} onChange={setAmount} />
+							<AmountInput className="bg-slate-900 text-sky-500 font-semibold" value={amount} onChange={setAmount} />
 							{/* Removed columns for ORNE and LUNA */}
 						</div>
 					</div>
