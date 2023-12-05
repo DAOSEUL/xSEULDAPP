@@ -13,10 +13,10 @@ export function Earn() {
 		<div className="mt-5 lg:-mt-6">
 			<div className="mb-10 text-center lg:mb-20 lg:text-left">
 				<h1 className="mb-5 text-5xl font-bold">
-					<span className="earn-underline">MINT</span> BURN
+					<span className="text-sky-500">MINT</span> BURN
 				</h1>
 				<h2 className="text-2xl">
-					SEUL <span className="text-green">xSEUL</span>
+					SEUL <span className="text-sky-500">xSEUL</span>
 				</h2>
 			</div>
 
