@@ -19,7 +19,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
   'inline-flex items-center justify-center font-semibold px-4 py-2 border border-transparent rounded-full transition-colors',
   {
     'bg-slate-900 text-sky-500 hover:bg-slate-800 hover:text-sky-400': variant === 'fill', // Ganti warna background dan teks di sini
-    'text-green border-2 !border-green hover:bg-slate-900 hover:text-sky-500': variant === 'outline',
+    'text-sky-500 border-2 !border-sky-500 hover:bg-slate-900 hover:text-sky-500': variant === 'outline',
   },
   {
     'h-8 px-3 text-sm': size === 'sm',
