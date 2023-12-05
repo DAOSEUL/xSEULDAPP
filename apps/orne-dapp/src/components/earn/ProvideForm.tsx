@@ -36,7 +36,9 @@ export function ProvideForm() {
 					{/*Mint <span className="text-green">xSEUL</span> */}
         </h2>
       </div>
-
+      <button className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white">
+        Max
+      </button> 
       <div className="mb-10 flex flex-col items-center gap-8">
         <div className="w-full flex-1">
           <div className="bg-offWhite flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
