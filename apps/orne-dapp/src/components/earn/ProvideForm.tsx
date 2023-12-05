@@ -39,7 +39,7 @@ export function ProvideForm() {
     <>
       <div className="mb-5 flex items-center gap-2">
         <h2 className="text-3xl font-semibold">
-          Mint <span className="text-green">xSEUL</span>
+					{/*Mint <span className="text-green">xSEUL</span>*/}
         </h2>
         <button
           type="button" // Ensure it's a button, not a form submission button
@@ -54,9 +54,9 @@ export function ProvideForm() {
         <div className="w-full flex-1">
           <div className="bg-offWhite flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
             <div className="flex w-full justify-between">
-              <span className="text-darkBlue50 mb-3">Balance</span>
+              <span className="text-sky-950 mb-3">Balance SEUL 》》》</span>
               <div className="-mt-2 flex items-center gap-2">
-                <span className="text-darkBlue50">
+                <span className="text-sky-950">
                   {isLoadingBalance ? (
                     <ThreeDots color="hsl(203,23%,42%)" height="10" />
                   ) : (
