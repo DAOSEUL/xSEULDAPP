@@ -39,7 +39,7 @@ export function WithdrawForm() {
   <>
     <div className="mb-5 flex items-center gap-2">
       <h2 className="text-3xl font-semibold">
-        Burn <span className="text-green">xSEUL</span>
+        <span className="text-green"></span>
       </h2>
       {/* <button className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white">
         Max
