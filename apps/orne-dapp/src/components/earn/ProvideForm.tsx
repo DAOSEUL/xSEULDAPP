@@ -37,7 +37,7 @@ export function ProvideForm() {
 
   return (
     <>
-      <div className="mb-5 flex items-center gap-2">
+		<div className="mb-5 flex items-center gap-2">
         <h2 className="text-3xl font-semibold">
 					{/*Mint <span className="text-green">xSEUL</span>*/}
         </h2>
@@ -49,12 +49,12 @@ export function ProvideForm() {
           Max
         </button>
       </div>
-
+	<div className="mt-5 lg:-mt-6 bg-slate-900">
       <div className="mb-10 flex flex-col items-center gap-8">
         <div className="w-full flex-1">
           <div className="bg-offWhite flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
             <div className="flex w-full justify-between">
-              <span className="text-sky-950 mb-3">Balance SEUL 》》》</span>
+              <span className="text-sky-500 mb-3">Balance SEUL 》》》</span>
               <div className="-mt-2 flex items-center gap-2">
                 <span className="text-sky-950">
                   {isLoadingBalance ? (
