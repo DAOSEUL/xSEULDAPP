@@ -37,9 +37,9 @@ export function ProvideForm() {
 
   return (
     <>
-		<div className="mb-5 flex items-center gap-2">
-        <h2 className="text-3xl font-semibold">
-					{/*Mint <span className="text-green">xSEUL</span>*/}
+      <div className="mb-5 flex items-center gap-2">
+        <h2 className="text-3xl font-semibold text-sky-500"> {/* Updated text color */}
+          {/*Mint <span className="text-green">xSEUL</span>*/}
         </h2>
         <button
           type="button" // Ensure it's a button, not a form submission button
@@ -49,14 +49,14 @@ export function ProvideForm() {
           Max
         </button>
       </div>
-	<div className="mt-5 lg:-mt-6 bg-slate-900">
+
       <div className="mb-10 flex flex-col items-center gap-8">
         <div className="w-full flex-1">
-          <div className="bg-offWhite flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
+          <div className="bg-slate-900 flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm"> {/* Updated background color */}
             <div className="flex w-full justify-between">
-              <span className="text-sky-500 mb-3">Balance SEUL 》》》</span>
+              <span className="text-sky-500 mb-3">Balance SEUL 》》》</span> {/* Updated text color */}
               <div className="-mt-2 flex items-center gap-2">
-                <span className="text-sky-950">
+                <span className="text-sky-500"> {/* Updated text color */}
                   {isLoadingBalance ? (
                     <ThreeDots color="hsl(203,23%,42%)" height="10" />
                   ) : (
@@ -66,7 +66,7 @@ export function ProvideForm() {
               </div>
             </div>
             <div className="flex justify-between">
-              <AmountInput className="bg-offWhite text-2xl font-semibold" value={amount} onChange={setAmount} />
+              <AmountInput className="bg-slate-900 text-2xl font-semibold text-sky-500" value={amount} onChange={setAmount} /> {/* Updated background and text color */}
             </div>
           </div>
         </div>
