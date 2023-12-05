@@ -35,6 +35,13 @@ export function ProvideForm() {
         <h2 className="text-3xl font-semibold">
           Mint <span className="text-green">xSEUL</span>
         </h2>
+				 <button
+            type="button" // Ensure it's a button, not a form submission button
+            className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white"
+            onClick={handleMaxClick}
+          >
+            Max
+          </button>
       </div>
 
       <div className="mb-10 flex flex-col items-center gap-8">
