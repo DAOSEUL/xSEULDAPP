@@ -48,7 +48,7 @@ export function WithdrawForm() {
 				</h2>
 				<button
 					type="button"
-					className="border-green bg-green25 hover:bg-green flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white"
+					className="border-green bg-slate-90025 hover:bg-slate-900 flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white"
 					onClick={handleMaxClick}
 				>
 					Max

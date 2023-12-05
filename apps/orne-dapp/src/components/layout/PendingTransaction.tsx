@@ -39,7 +39,7 @@ export function PendingTransaction() {
 	}
 
 	return (
-		<div className="bg-green25 flex items-center justify-center gap-2 rounded-full py-1 px-2">
+		<div className="bg-slate-90025 flex items-center justify-center gap-2 rounded-full py-1 px-2">
 			<Oval
 				ariaLabel="loading-indicator"
 				height={20}

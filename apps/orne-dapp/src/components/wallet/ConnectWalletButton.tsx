@@ -14,7 +14,7 @@ export function ConnectWalletButton() {
 			<div className="mt-6 flex flex-col gap-4">
 				{allowedConnections.map((connection) => (
 					<div
-						className="cursor-pointer rounded-lg bg-beige p-4 transition-colors hover:bg-green hover:text-white"
+						className="cursor-pointer rounded-lg bg-beige p-4 transition-colors hover:bg-slate-900 hover:text-white"
 						key={connection.type}
 						onClick={() => connect(connection.type)}
 					>

@@ -20,7 +20,7 @@ export function SlippageSelector({ slippage, onSlippageChange }: SlippageSelecto
 	const customInputClasses = clsx(
 		'block w-1/5 rounded-lg border border-mediumGrey bg-transparent px-3 font-semibold placeholder-gray-500',
 		{
-			'!border-green border-2 !bg-green25': isCustomAmount,
+			'!border-green border-2 !bg-slate-90025': isCustomAmount,
 		}
 	);
 
@@ -30,8 +30,8 @@ export function SlippageSelector({ slippage, onSlippageChange }: SlippageSelecto
 			<div className="flex w-full gap-2">
 				{kSlippageOptions.map((slippageOption) => (
 					<button
-						className={`border-green hover:bg-green flex flex-1 items-center justify-center rounded-lg border font-semibold transition-colors hover:text-white ${
-							!isCustomAmount && slippage === slippageOption ? 'bg-green text-white' : 'text-green bg-transparent'
+						className={`border-green hover:bg-slate-900 flex flex-1 items-center justify-center rounded-lg border font-semibold transition-colors hover:text-white ${
+							!isCustomAmount && slippage === slippageOption ? 'bg-slate-900 text-white' : 'text-green bg-transparent'
 						}}}`}
 						key={slippageOption}
 						onClick={() => handleSlippageChange(slippageOption)}

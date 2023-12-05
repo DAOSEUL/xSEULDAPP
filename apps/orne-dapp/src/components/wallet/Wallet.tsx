@@ -51,7 +51,7 @@ export function Wallet() {
 							initial={{ x: 0, y: -8, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							exit={{ y: -16, opacity: 0 }}
-							className="bg-green absolute top-7 right-0 rounded-full px-2 py-1 text-xs text-white"
+							className="bg-slate-900 absolute top-7 right-0 rounded-full px-2 py-1 text-xs text-white"
 						>
 							Copied!
 						</motion.span>
