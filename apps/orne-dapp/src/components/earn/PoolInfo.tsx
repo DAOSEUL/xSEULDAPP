@@ -14,23 +14,23 @@ export function PoolInfo() {
 	const ornePoolInfo = useOrnePoolInfo();
 
 	return (
-		<div className="bg-offWhite flex flex-1 flex-col justify-between gap-10 rounded-lg p-8 pb-14 shadow-sm lg:flex-row lg:items-center lg:pb-8">
+		<div className="bg-slate-900 flex flex-1 flex-col justify-between gap-10 rounded-lg p-8 pb-14 shadow-sm lg:flex-row lg:items-center lg:pb-8">
 			<div className="flex flex-col">
-				<span className="mb-2 text-lg font-semibold">xSEUL / axlUSDT</span>
+				<span className="mb-2 text-sky-500 font-semibold">xSEUL / axlUSDT</span>
 				<div className="flex gap-2">
 					<IconToken name={Token.Orne} size={36} />
 					<IconToken name={Token.Luna} size={36} />
 				</div>
 			</div>
 			<div className="flex flex-col gap-2">
-				<span className="text-darkBlue50">APR</span>
-				<span className="text-2xl font-semibold">
+				<span className="text-sky-500">APR</span>
+				<span className="text-sky-500 font-semibold">
 					{isLoading ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : `${readPercent(APR)}%`}
 				</span>
 			</div>
 			<div className="flex flex-col gap-2">
-				<span className="text-darkBlue50">Liquidity</span>
-				<span className="text-2xl font-semibold">
+				<span className="text-sky-500">Liquidity</span>
+				<span className="text-sky-500 font-semibold">
 					<span className="text-base">$</span>{' '}
 					{isLoading ? <ThreeDots color="hsl(203,23%,42%)" height="10" /> : readAmounts(ornePoolInfo.data!.luna * 2, { decimals: 6, comma: true, fixed: 3 })}
 				</span>
