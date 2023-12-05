@@ -43,7 +43,7 @@ export function ProvideForm() {
         </h2>
         <button
           type="button" // Ensure it's a button, not a form submission button
-          className="border-green bg-slate-90025 hover:bg-slate-900 flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-white"
+          className="border-sky-500 bg-slate-90025 hover:bg-slate-900 flex h-7 items-center justify-center rounded-lg border px-3 font-semibold transition-colors hover:text-sky-500"
           onClick={handleMaxClick}
         >
           Max
