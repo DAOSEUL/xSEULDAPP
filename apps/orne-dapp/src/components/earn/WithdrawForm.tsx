@@ -50,7 +50,7 @@ export function WithdrawForm() {
       <div className="w-full flex-1">
         <div className="bg-offWhite flex h-32 flex-1 flex-col justify-center rounded-lg p-8 shadow-sm">
           <div className="flex w-full justify-between">
-            <span className="text-darkBlue50 mb-3">Balance</span>
+            <span className="text-darkBlue50 mb-3">Balance xSEUL</span>
             <div className="-mt-2 flex items-center gap-2">
               <span className="text-darkBlue50">
                 {orneBalance.isLoading ? (
